@@ -39,7 +39,7 @@ option_gender = le_gender.transform([option_gender])[0]
 
 # capturing the bmi
 option_bmi = st.text_input(
-        'enter the bmi',
+        'enter the bmi (values should be in range 15-60)',
         on_change=callback_search
     )
 # print(option_bmi)
