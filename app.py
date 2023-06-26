@@ -20,7 +20,7 @@ def callback_search():
 # capturing the selected age
 option_age = st.selectbox(
         'select the age',
-        [i for i in range(1, 120)],
+        [i for i in range(15, 80)],
         on_change=callback_search
     )
 print(option_age)
