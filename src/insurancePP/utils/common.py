@@ -39,6 +39,7 @@ def create_directories(path_to_directories : list, verbose=True):
         path_to_directories (list): list of paths to directories
         verbose (bool): if True, print the directory creation
     """
+
     for directory in path_to_directories:
         os.makedirs(directory, exist_ok=True)
         if verbose:
