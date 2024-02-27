@@ -25,8 +25,8 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         try:
-            categorical_columns = ['sex', 'smoker', 'region']
-            numerical_columns = ['age', 'bmi', 'children']
+            categorical_columns = ['sex', 'children', 'smoker', 'region']
+            numerical_columns = ['age', 'bmi']
             logger.info("Numerical and Categorical features has been extracted from dataset")
 
             logger.info("creating categorical pipeline")

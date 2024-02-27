@@ -34,4 +34,11 @@ class ModelTrainingConfig:
     prepared_train_data : Path
     prepared_test_data : Path
     preprocessor_obj_file_path : Path
+
+
+@dataclass(frozen=True)
+class ModelPredictionConfig:
+    root_dir : Path
+    preprocessor_obj_file_path : Path
+    model_path : Path
     

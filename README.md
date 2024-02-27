@@ -1,1 +1,1 @@
-# ipp
+# Insurance Premium Prediction

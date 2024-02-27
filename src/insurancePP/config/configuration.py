@@ -3,7 +3,8 @@ from insurancePP.utils.common import read_yaml, create_directories
 from insurancePP.entity import (DataIngestionConfig,
                                 DataValidationConfig,
                                 DataTransformationConfig,
-                                ModelTrainingConfig)   
+                                ModelTrainingConfig,
+                                ModelPredictionConfig)   
 
 class ConfigurationManager:
     def __init__(self, config_filepath= CONFIG_FILE_PATH, params_filepath= PARAMS_FILE_PATH):
@@ -71,3 +72,14 @@ class ConfigurationManager:
         )
 
         return model_training_config
+
+
+    def get_model_prediction_config(self) -> ModelPredictionConfig:
+        config = self.config.model_prediction
+        create_directories([config.root_dir])
+
+        return ModelPredictionConfig(
+            root_dir = config.root_dir,
+            preprocessor_obj_file_path = config.preprocessor_obj_file_path,
+            model_path = config.model_path
+        )

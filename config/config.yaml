@@ -28,4 +28,10 @@ model_trainer:
   prepared_test_data : artifacts/data_transformation/test_arr.npy
   preprocessor_obj_file_path : artifacts/data_transformation/preprocessor.pkl
 
+
+model_prediction:
+  root_dir: artifacts/model_prediction
+  preprocessor_obj_file_path : artifacts/data_transformation/preprocessor.pkl
+  model_path: artifacts/model_trainer/model.pkl
+
   
