@@ -50,6 +50,7 @@ jobs:
 
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
+        run: echo "environmant authentication has started"
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_NAME }}
