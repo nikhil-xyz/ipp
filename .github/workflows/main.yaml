@@ -47,19 +47,17 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-        with:
-          registry-type: public
-
+        
       - name: Build, tag, and push docker image to Amazon ECR Public
         env:
-          REGISTRY: ${{ steps.login-ecr-public.outputs.registry }}
+          AWS_ECR_LOGIN_URI: ${{ steps.login-ecr-public.outputs.registry }}
           REGISTRY_ALIAS: my-ecr-public-registry-alias
-          REPOSITORY: my-ecr-public-repo
+          ECR_REPOSITORY_NAME: my-ecr-public-repo
           IMAGE_TAG: latest
         run: |
-          docker build -t $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG .
-          docker push $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG
-          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          docker build -t $AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME:$IMAGE_TAG .
+          docker push $AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME:$IMAGE_TAG
+          echo "::set-output name=image::$AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME:$IMAGE_TAG"
           
           
   Continuous-Deployment:
