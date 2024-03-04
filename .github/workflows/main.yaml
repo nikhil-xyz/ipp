@@ -53,7 +53,7 @@ jobs:
           AWS_ECR_LOGIN_URI: ${{ steps.login-ecr-public.outputs.registry }}
           REGISTRY_ALIAS: my-ecr-public-registry-alias
           ECR_REPOSITORY_NAME: my-ecr-public-repo
-          IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: latest
         run: |
           docker build -t $AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME:$IMAGE_TAG .
           docker push $AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME:$IMAGE_TAG
