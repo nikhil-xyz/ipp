@@ -55,9 +55,9 @@ jobs:
           ECR_REPOSITORY_NAME: my-ecr-public-repo
           IMAGE_TAG: latest
         run: |
-          docker build -t $AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME .
-          docker push $AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME
-          echo "::set-output name=image::$AWS_ECR_LOGIN_URI/$REGISTRY_ALIAS/$ECR_REPOSITORY_NAME"
+          docker build -t $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG .
+          docker push $REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG
+          echo "::set-output name=image::$REGISTRY/$REGISTRY_ALIAS/$REPOSITORY:$IMAGE_TAG"
           
           
   Continuous-Deployment:
