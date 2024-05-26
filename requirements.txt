@@ -11,6 +11,6 @@ python-box==6.0.2
 PyYAML
 datasets
 asyncio
-os-sys
+os
 
 -e .
