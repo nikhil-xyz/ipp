@@ -3,6 +3,7 @@ import pandas as pd
 from insurancePP.pipeline.prediction import PredictionPipeline
 import asyncio
 from insurancePP.logging import logger
+import os
 
 
 st.title('Insurance Premium Prediction')
