@@ -98,6 +98,7 @@ async def main():
         st.write(result)
 
 if __name__ == '__main__':
-    await async_task()
+    # await async_task()
+    async_task()
     asyncio.run(main())
 
