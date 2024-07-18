@@ -15,5 +15,5 @@ RUN chown user:user -R $HOME/app
 COPY ./requirements.txt /code/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-RUN python main.py
+# RUN python main.py
 CMD ["streamlit", "run", "app.py"]

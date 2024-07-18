@@ -8,6 +8,9 @@ import os
 
 st.title('Insurance Premium Prediction')
 
+if 'count' not in st.session_state:
+    st.session_state.count = 0
+
 
 def main():
     
@@ -84,10 +87,12 @@ def main():
         pipe = PredictionPipeline()
         result = pipe.predicting_result(data_df)
         st.write('The Predicted Expense is: {}'.format(result[0]))
+        logger.info('Prediction Success')
         
 
 if __name__ == '__main__':
-   
-    # os.system("python main.py")
-    # logger.info("Training Successful!")
+    if (st.session_state.count == 0):
+        st.session_state.count += 1
+        os.system("python main.py")
+        logger.info("Training Successful!")
     main()
