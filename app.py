@@ -8,17 +8,17 @@ import os
 
 st.title('Insurance Premium Prediction')
 
-async def async_task():
-    # executing main.py
-    try:
-        os.system("python main.py")
-        logger.info("Training Successful!")
-    except Exception as e:
-        logger.info(f"Error occured {e}")
+# async def async_task():
+#     # executing main.py
+#     try:
+#         os.system("python main.py")
+#         logger.info("Training Successful!")
+#     except Exception as e:
+#         logger.info(f"Error occured {e}")
 
 
 
-async def main():
+def main():
     
     def callback_search():
         #   Destroying old sessions
@@ -98,9 +98,8 @@ async def main():
         st.write(result)
 
 if __name__ == '__main__':
-    # await async_task()
-    # async_task()
+   
     os.system("python main.py")
     logger.info("Training Successful!")
-    asyncio.run(main())
+    main()
 
