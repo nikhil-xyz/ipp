@@ -60,7 +60,6 @@ def main():
             on_change=callback_search
         )
 
-
     custom_data = {
         'age': [option_age],
         'sex': [option_gender],
@@ -69,7 +68,6 @@ def main():
         'smoker': [option_smoker],
         'region': [option_region]
     }
-
 
 
     prediction = st.button('Predict')
