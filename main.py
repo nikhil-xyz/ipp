@@ -11,6 +11,7 @@ try:
     data_ingestion_training_pipeline = DataIngestionTrainingPipeline()
     data_ingestion_training_pipeline.main()
     logger.info(f'>>>>> stage {STAGE_NAME} has completed <<<<<')
+    logger.info('\n')
 except Exception as e:
     logger.error(f'>>>>> stage {STAGE_NAME} has failed <<<<<')
     raise e
@@ -21,6 +22,7 @@ try:
     data_validation_pipeline = DataValidationPipeline()
     data_validation_pipeline.main()
     logger.info(f'>>>>> stage {STAGE_NAME} has completed <<<<<')
+    logger.info('\n')
 except Exception as e:
     logger.error(f'>>>>> stage {STAGE_NAME} has failed <<<<<')
     raise e
@@ -32,6 +34,7 @@ try:
     data_transformation_pipeline = DataTransformationPipeline()
     data_transformation_pipeline.main()
     logger.info(f'>>>>> stage {STAGE_NAME} has completed <<<<<')
+    logger.info('\n')
 except Exception as e:
     logger.error(f'>>>>> stage {STAGE_NAME} has failed <<<<<')
     raise e
@@ -43,6 +46,7 @@ try:
     model_training_pipeline = ModelTrainingPipeline()
     model_training_pipeline.main()
     logger.info(f'>>>>> stage {STAGE_NAME} has completed <<<<<')
+    logger.info('\n')
 except Exception as e:
     logger.error(f'>>>>> stage {STAGE_NAME} has failed <<<<<')
     raise e

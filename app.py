@@ -8,15 +8,6 @@ import os
 
 st.title('Insurance Premium Prediction')
 
-# async def async_task():
-#     # executing main.py
-#     try:
-#         os.system("python main.py")
-#         logger.info("Training Successful!")
-#     except Exception as e:
-#         logger.info(f"Error occured {e}")
-
-
 
 def main():
     
@@ -99,7 +90,6 @@ def main():
 
 if __name__ == '__main__':
    
-    os.system("python main.py")
-    logger.info("Training Successful!")
+    # os.system("python main.py")
+    # logger.info("Training Successful!")
     main()
-
