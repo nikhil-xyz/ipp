@@ -86,7 +86,7 @@ def main():
         # print(data_df.dtypes)
         pipe = PredictionPipeline()
         result = pipe.predicting_result(data_df)
-        st.write('The Predicted Expense is: {}'.format(result[0]))
+        st.write('The Predicted Expense is: {}'.format(round(result[0], 2)))
         logger.info('Prediction Success')
         
 
