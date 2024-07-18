@@ -19,9 +19,7 @@ async def async_task():
 
 
 async def main():
-    await async_task()
-
-
+    
     def callback_search():
         #   Destroying old sessions
         st.session_state['search_btn'] = False
@@ -84,7 +82,7 @@ async def main():
 
 
     prediction = st.button('Predict')
-    # adding session state fot 'prediction' button
+    # adding session state for 'prediction' button
     if st.session_state.get('search_btn') != True:
         st.session_state['search_btn'] = prediction
 
@@ -99,5 +97,7 @@ async def main():
         st.write('The Predicted Expense is: ')
         st.write(result)
 
-asyncio.run(main())
+if __name__ == '__main__':
+    await async_task()
+    asyncio.run(main())
 
