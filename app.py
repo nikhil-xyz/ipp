@@ -99,6 +99,8 @@ async def main():
 
 if __name__ == '__main__':
     # await async_task()
-    async_task()
+    # async_task()
+    os.system("python main.py")
+    logger.info("Training Successful!")
     asyncio.run(main())
 
