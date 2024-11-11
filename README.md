@@ -37,3 +37,7 @@ streamlit run app.py
 ```
 export HF_TOKEN = <HF_TOKEN>
 ```
+## Production Link
+```
+https://huggingface.co/spaces/hf-nikhil/ipp
+```
