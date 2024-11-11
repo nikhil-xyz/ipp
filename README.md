@@ -7,26 +7,33 @@ sdk: docker
 app_port: 8501
 ---
 
-### Clone the Repository
+## Overview
+The goal of this project is to give people an estimate of how much they need based on
+their individual health situation. After that, customers can work with any health
+insurance carrier and its plans and perks while keeping the projected cost from our
+study in mind. This can assist a person in concentrating on the health side of an
+insurance policy rather han the ineffective part.
+
+
+## Git Commands
 ```
-https://github.com/nikhil-xyz/ipp.git
-```
-### Create a Conda environment and activating it
-```
-conda create -n venv python=3.8 -y
-conda activate venv
+git add .
+git commit -m "message"
+git push origin main
 ```
 
-### Execute the command
+## Virtual Environmant Commands (Anaconda)
+```
+conda create -n <environament_name> python=<version> -y
+conda activate <environament_name>
+conda deactivate
+```
+
+## Project Execution Command
 ```
 streamlit run app.py
 ```
-
-### Streamlit Exposed port
+## Environment Variables
 ```
-8501
+export HF_TOKEN = <HF_TOKEN>
 ```
-
-###  Setup github secrets:
-
-    HF_TOKEN =
